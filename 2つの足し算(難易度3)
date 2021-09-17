@@ -1,0 +1,25 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int q,n;
+    char str[1001],temp[11];
+    cin>>q>>str>>n;
+    for(int i=0;i<q;i++){
+        bool check=true;
+        cin>>temp;
+        for(int j=0;j<strlen(temp);j++){
+           // cout<<int(temp[j])<<endl;
+            if(temp[j]<47||temp[j]>58){
+                check=false;
+            }
+        }
+        if(check){
+            n+=atoi(temp);
+        }
+        else{
+           strcat(str,temp);
+        }
+    }
+    cout<<str<<endl;
+    cout<<n<<endl;
+}
