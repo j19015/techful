@@ -1,0 +1,12 @@
+input=gets.split(" ").map(&:to_i)
+str=gets.split(" ").map(&:to_s)
+str2=gets.split(" ").map(&:to_s)
+cnt=0
+input[1].times{ |n|
+    if str.include?(str2[n])
+        nil
+    else
+        cnt=cnt+1
+    end
+}
+puts cnt
