@@ -1,0 +1,31 @@
+input=gets.split(" ").map(&:to_i)
+t=gets.to_s
+f=gets.to_s
+t_c=[]
+f_c=[]
+t_ans=0
+f_ans=0
+(0...input[0]).map{
+    |n|
+    t_c[n]=t[n].ord
+}
+(0...input[1]).map{
+    |n|
+    f_c[n]=f[n].ord
+}
+t_c.sort!
+f_c.sort!
+
+(0...input[0]).map{
+    |n|
+    t_ans=t_ans+t_c[n]*(input[0]-n)
+}
+(0...input[1]).map{
+    |n|
+    f_ans=f_ans+f_c[n]*(input[1]-n)
+}
+#p t_c
+#p f_c
+#p t_ans
+#p f_ans
+puts (t_ans-f_ans).abs
