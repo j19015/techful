@@ -1,0 +1,22 @@
+s=gets.split("").map(&:to_s)
+t=gets.split("").map(&:to_s)
+#p s
+cnt=0
+n=0
+#(s.size).times{
+    #|n|
+while n<s.length-t.length do
+    #puts n.to_s+"回目"
+    if s[n]==t[0]
+        ans1=s[n...n+(t.length)].sort
+        #p ans1
+        #p t.sort
+        if ans1==t.sort
+            cnt=cnt+1
+            n=n+t.length
+        end
+    end
+    n=n+1
+#}
+end
+p cnt
