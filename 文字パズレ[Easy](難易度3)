@@ -1,0 +1,17 @@
+a=gets.to_s
+a=a.delete(" " "\n")
+s=gets.split(" ").map(&:to_s)
+cnt_all=0
+cnt=0
+(s.length).times{
+    |n|
+    (s[n].length).times{
+        |p|
+        cnt_all=cnt_all+1
+        if  a.index(s[n][p])!=nil
+            a[a.index(s[n][p])]='\0'
+            cnt=cnt+1
+        end
+    }
+}
+p cnt_all-cnt
