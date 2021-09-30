@@ -1,0 +1,3 @@
+h,m=gets.split(" ").map(&:to_i)
+min=h.lcm(m)
+puts ((h*m)*(min/h))*(min/m)-h*m
